@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Copyright (c) 2015, NVIDIA CORPORATION. All rights reserved.
 
-DOCKER=${DOCKER:-"nvidia-docker"}
+DOCKER=${DOCKER:-"docker"}
 
 NV_DEVICE="/dev/nvidia"
 UVM_DEVICE="${NV_DEVICE}-uvm"
@@ -147,7 +147,7 @@ if [ -z "$JUPYTERPORT" ] ; then
 fi
 
 echo "* Setting Notebook port binding to: $JUPYTERPORT (to set manually add -p $JUPYTERPORT:8888 as flag)"
-echo 
+echo
 echo "You can now open the notebook on the host machine by directing your browser to"
 echo
 echo "    http://localhost:$JUPYTERPORT"
